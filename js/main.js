@@ -4,7 +4,7 @@
 
 require.config({
     paths: {
-        jquery: 'jquery-1.7.2'
+        jquery: 'jquery-2.0.3'
     }
 });
 
