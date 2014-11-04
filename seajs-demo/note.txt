@@ -1,0 +1,28 @@
+一、seajs组织结构
+
+seajs
+	_data
+	_util
+	_fn
+	use
+	config
+	pluginSDK
+	noConflick
+	
+define
+
+
+一、use
+
+1 fn.use
+2 fn.load(ids, callback)
+3 load(ids, callback, context)
+4 preload(callback)
+5 callback 匿名函数
+6 provide(uri, function)
+7 fn.createRequire(context)
+8 require(uri)
+9 Require.call(that, id)
+10 initExports(mod, {uri:xx, parent: context})
+11 
+
