@@ -1,5 +1,6 @@
 define(function(require, exports) {
-	
+
+    console.log('### cache ###');
 	var idSeed = 0,
 		cache = {},
 		id = '_ guid _';

@@ -29,7 +29,8 @@
  */
 
 define(function(require, exports) {
-	
+    console.log('### event ###');
+
 	var cache = require('cache');
 	
 	var doc = window.document,
