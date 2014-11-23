@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>seajs</title>
+		<meta charset="utf-8">
+		<style>
+			#header {
+				background: gold;
+			}
+		</style>
+		<script src="sea-debug.js"></script>
+ 	</head>
+ 	<body>
+		<div id="header">
+            <ul>
+                <li><a href="#/main">Main</a></li>
+                <li><a href="#/profile">Profile</a></li>
+            </ul>
+		</div>
+        <div ng-view></div>
+		<script>
+            seajs.config({
+                base: './',
+                alias: {
+                    angular: 'angular_1.3.0',
+                    router: 'angular-route'
+                }
+            });
+            // // var boot = seajs.noConflict();
+            // seajs.use('event', function(E) {
+            // var div = document.getElementsByTagName('div')[0];
+            // E.bind(div, 'click', function() {
+            // alert('hello')
+            // });
+            // });
+            // seajs.use('ui/ScrollPane', function() {})
+            console.log('loading...');
+            seajs.use(['angular'], function() {
+                seajs.use(['router','angular_config'],function(){
+                angular.bootstrap(window.document,['app_main']);
+                    console.log('loaded');
+                });
+            });
+		</script>
+ 	</body>
+</html>
